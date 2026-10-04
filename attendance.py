@@ -1,8 +1,10 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from config import SECTIONS, SUBJECTS
 from UI import banner, print_record, print_table_header, print_record_row, print_table_border, clear_screen
 from storage import records, save_records
+
+PH_TIME = timezone(timedelta(hours=8))
 
 
 def get_student_info():
