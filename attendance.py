@@ -59,7 +59,10 @@ def choose_subject():
 
 def get_status(check_time, subject):
     class_start = check_time.replace(
-        hour=subject["start_hour"], minute=subject["start_minute"], second=0, microsecond=0
+        hour=subject["start_hour"], 
+        minute=subject["start_minute"], 
+        second=0, 
+        microsecond=0
     )
     late_limit = class_start + timedelta(minutes=subject["grace_minutes"])
     if check_time <= class_start:
